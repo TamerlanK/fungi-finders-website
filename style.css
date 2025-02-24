@@ -185,6 +185,26 @@
   }
 }
 
+@layer layout {
+  .wrapper {
+    --wrapper-max-width: 1130px;
+    --wrapper-padding: 1rem;
+
+    max-width: var(--wrapper-max-width);
+    margin-inline: auto;
+    padding-inline: var(--wrapper-padding);
+    box-sizing: content-box;
+
+    &[data-width="wide"] {
+      --wrapper-max-width: 1330px;
+    }
+
+    &[data-width="narrow"] {
+      --wrapper-max-width: 720px;
+    }
+  }
+}
+
 @layer utilities {
   .visually-hidden {
     clip: rect(0 0 0 0);
