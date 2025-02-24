@@ -10,13 +10,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="wrapper" data-width="wide">
         <div class="site-header__inner">
           <img src="/assets/fungi-finders.svg" alt="Fungi Finders" />
-          <nav class="primary-navigation">
+          <button aria-controls="primary-nav" aria-expanded="false">
+            <span class="visually-hidden"> Open the main menu </span>
+            <img src="assets/hamburger.svg" alt="Open the main menu" />
+          </button>
+          <nav id="primary-nav" class="primary-navigation">
             <ul role="list">
               <li>
                 <a href="/">Discover</a>
@@ -35,7 +41,7 @@
     <main>
       <section class="hero section flow" data-padding="compact">
         <div class="wrapper">
-          <h1 class="hero__title class="card__title"">
+          <h1 class="hero__title">
             Discover the World of
             <span>Mushroom Foraging</span>
           </h1>
