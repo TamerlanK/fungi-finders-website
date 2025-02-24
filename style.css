@@ -286,7 +286,7 @@
     }
 
     @media (width < 760px) {
-      /* display: none; */
+      display: none;
       position: absolute;
       z-index: 10;
       top: 0;
