@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="style.css" />
 
     <script src="script.js" defer></script>
+    <script src="mushroom-filter.js" defer></script>
   </head>
   <body>
     <a href="#main" class="skip-to-main">Skip to main content</a>
     <header class="site-header">
       <div class="wrapper" data-width="wide">
         <div class="site-header__inner">
-          <a href="/index.html">
+          <a href="/">
             <img src="/assets/fungi-finders.svg" alt="Fungi Finders" />
           </a>
           <button aria-controls="primary-nav" aria-expanded="false">
@@ -28,13 +29,13 @@
           <nav id="primary-nav" class="primary-navigation">
             <ul role="list">
               <li>
-                <a href="/index.html">Discover</a>
+                <a href="/">Discover</a>
               </li>
               <li>
-                <a href="mushroom-guide.html">Mushroom Guide</a>
+                <a href="/mushroom-guide.html">Mushroom Guide</a>
               </li>
               <li>
-                <a href="mushroom-guide.html#faq">FAQ</a>
+                <a href="/mushroom-guide.html#faq">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -103,13 +104,13 @@
           <div class="flow">
             <h2 class="section-title">Get to know your mushrooms</h2>
             <div class="flex-group">
-              <select>
+              <select name="season" id="season" hidden>
                 <option value="all">Season: All</option>
                 <option value="spring">Spring</option>
                 <option value="summer">Summer</option>
                 <option value="fall">Fall</option>
               </select>
-              <select>
+              <select name="edible" id="edible" hidden>
                 <option value="all">Type: All</option>
                 <option value="edible">Edible</option>
                 <option value="toxic">Toxic</option>
@@ -117,7 +118,7 @@
             </div>
 
             <!-- GRID OF MUSHROOM CARDS -->
-            <div class="grid-auto-fit">
+            <div class="grid-auto-fill">
               <div class="card">
                 <h3 class="card__title">Chanterelle</h3>
                 <ul
@@ -408,6 +409,9 @@
                   Verify identification - has toxic look-alikes
                 </div>
               </div>
+            </div>
+            <div class="no-matches" hidden>
+              No matches for the selected criteria. Try a different filter.
             </div>
           </div>
         </div>
