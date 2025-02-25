@@ -255,6 +255,27 @@
 }
 
 @layer components {
+  .skip-to-main:not(:focus) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .skip-to-main {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--background-accent-main);
+    padding: 0.75rem 1.5rem;
+    color: var(--text-high-contrast);
+    border-radius: var(--border-radius-2);
+    z-index: 9999;
+  }
+
   .site-header {
     padding-block: 1rem;
   }
@@ -279,6 +300,8 @@
   }
 
   .primary-navigation {
+    display: block;
+
     ul {
       display: flex;
       flex-wrap: wrap;
