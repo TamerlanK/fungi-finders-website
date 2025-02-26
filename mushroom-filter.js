@@ -24,12 +24,11 @@ function updateFilter(event) {
   const filterType = event.target.name
   currentFilters[filterType] = event.target.value
 
-  if (!document.startViewTransition()) {
+  if ("startViewTransition" in document) {
+    document.startViewTransition(() => filterCards())
+  } else {
     filterCards()
-    return
   }
-
-  document.startViewTransition(() => filterCards())
 }
 
 function filterCards() {
@@ -57,6 +56,8 @@ function filterCards() {
       noMatches.hidden = false
     }
   })
+
+  noMatches.hidden = hasVisibleCards
 }
 
 function enableFiltering() {
