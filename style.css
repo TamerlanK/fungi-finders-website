@@ -2,7 +2,7 @@
   navigation: auto;
 }
 
-:root {
+/* :root {
   --direction: -1;
 }
 
@@ -17,7 +17,7 @@
 
 ::view-transition-new(root) {
   animation: slide-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
+} */
 
 @keyframes slide-out {
   0% {
